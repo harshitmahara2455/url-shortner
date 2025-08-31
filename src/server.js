@@ -16,6 +16,10 @@ setInterval(() => {
 
 
 const PORT = process.env.PORT || 5000;
+app.get('/', (req, res) => {
+    // Send a string as the response
+    res.send('Front-end will be done soon ');
+});
 
 
 
