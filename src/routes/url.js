@@ -32,7 +32,7 @@ router.post("/shorten", rateLimiter, async (req, res) => {
 
       return res.json({
         slug,
-        shortUrl: `http://localhost:${process.env.PORT || 5000}/${slug}`,
+        shortUrl: `${process.env.BASE_URL}/${slug}`,
       });
     } catch (err) {
       // Check for the specific duplicate key error
